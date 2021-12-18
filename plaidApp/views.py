@@ -118,8 +118,6 @@ class GetTransactions(APIView):
                                                start_date=start_date,
                                                end_date=end_date)
             transactions = response['transactions']
-            # Manipulate the count and offset parameters to paginate
-            # transactions and retrieve all available data
             while len(transactions) < response['total_transactions']:
                 response = client.Transactions.get(access_token,
                                                    start_date=start_date,
