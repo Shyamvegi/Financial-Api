@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plaid</title>
+</head>
+
+<body>
+    <h1>Link to plaid </h1>
+    <p>Username : <strong>user_good</strong><br> password: <strong>pass_good</strong></p>
+
+    <button id="linkbutton">
+              PlaidConnect
+            </button>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript">
+    function connectPlaid()
+    {
+        $.ajax({
+            url: '/plaidApp/get-link-token/',
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+            type: 'GET',
+            dataType: 'json',
+            success: function(response){
+                const link_token = response.link_token;
+                console.log(link_token);
+                //console.log(data);
+                const handler = Plaid.create({
+                token: link_token,
+                onSuccess:(public_token, metadata) => {
+                    $.ajax({
+                        url: '/plaidApp/get-access-token/',
+                        type: 'GET',
+                        headers: {
+                            "X-CSRFToken": '{{ csrf_token }}'
+                        },
+                        data:{ 
+                            'public_token': public_token,
+                             csrfmiddlewaretoken: '{{ csrf_token }}',
+                         },
+                         success:function(response){
+                            console.log(public_token);
+                            window.location.href = "/plaid/home/";
+                        }
+                    });
+                },
+                onExit: (err, metadata) => {
+                    if(err!=null){
+                        if(err.error_code == "INVALID_LINK_TOKEN"){
+                            handler.destroy();
+                            handler.open();
+                        }
+                    }
+                },
+                receivedRedirectUri: null,
+            });
+                handler.open();
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    };
+    document.getElementById("linkbutton").onclick= function(){
+        connectPlaid();
+    };
+</script>
+</html>
