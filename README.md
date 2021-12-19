@@ -48,7 +48,7 @@ c:\\redis\\redis-cli ping
 (env) celery -A BankingApp worker -loglevel=info
 (env) celery -A BankingApp Beat -loglevel=info
 ```
-![](/images/celery.png.png)
+![](/Images/celery.png.png)
   
 ## API END-PONTS  
   
@@ -57,32 +57,32 @@ c:\\redis\\redis-cli ping
 ### ClientApp API (Using Postman make sure to include Authorization Token in Headers)  
 
 -  signup/ -- User-Signup-API  
-![](/images/signup.png.png)
+![](/Images/signup.png.png)
 -  login/  -- User-Login-API    
-![](/images/login.png.png)
+![](/Images/login.png.png)
   
 ### PlaidApp API (make sure to use authorization token in postman)
 ## oauth using authentication to plaid
 ## Refer to @https://plaid/docs
 
 -  plaidApp/ 
-![](/images/plaid.png.png)
-![](/images/1.png.png)
-![](/images/2.png.png)
-![](/images/3.png.png)
+![](/Images/plaid.png.png)
+![](/Images/1.png.png)
+![](/Images/2.png.png)
+![](/Images/3.png.png)
 
 -  plaidApp/get-link-token/ ------- (get public token using link token) 
-![](/images/plaid.png.png)  
+![](/Images/plaid.png.png)  
 
 -  plaidApp/get-access-token/ - (exchange public token to access_token)  
-![](/images/public.png.png)
-![](/images/access.png.png)
-![](/images/tokens.png.png)
+![](/Images/public.png.png)
+![](/Images/access.png.png)
+![](/Images/tokens.png.png)
    
 -  plaidApp/get-transactions/ ------- (fetch transactions using access token)  
-![](/images/transactions.png.png)
+![](/Images/transactions.png.png)
 
 ## Model Details:
-![](/images/x.png.png)
-![](/images/y.png.png)
-![](/images/z.png.png)
+![](/Images/x.png.png)
+![](/Images/y.png.png)
+![](/Images/z.png.png)
