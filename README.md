@@ -4,7 +4,7 @@ Assignment For Financial App Using Django,Rest Framework
 ## clone the repository using
 
 ```sh
-$git clone "git-url"
+$ git clone "git-url"
 ```
 
 
@@ -48,7 +48,7 @@ c:\\redis\\redis-cli ping
 (env) celery -A BankingApp worker -loglevel=info
 (env) celery -A BankingApp Beat -loglevel=info
 ```
-![](/images/celery.png)
+![](/images/celery.png.png)
   
 ## API END-PONTS  
   
@@ -57,32 +57,32 @@ c:\\redis\\redis-cli ping
 ### ClientApp API (Using Postman make sure to include Authorization Token in Headers)  
 
 -  signup/ -- User-Signup-API  
-![](/images/signup.png)
+![](/images/signup.png.png)
 -  login/  -- User-Login-API    
-![](/images/login.png)
+![](/images/login.png.png)
   
 ### PlaidApp API (make sure to use authorization token in postman)
 ## oauth using authentication to plaid
 ## Refer to @https://plaid/docs
 
 -  plaidApp/ 
-![](/images/plaid.png)
-![](/images/1.png)
-![](/images/2.png)
-![](/images/3.png)
+![](/images/plaid.png.png)
+![](/images/1.png.png)
+![](/images/2.png.png)
+![](/images/3.png.png)
 
 -  plaidApp/get-link-token/ ------- (get public token using link token) 
-![](/images/plaid.png)  
+![](/images/plaid.png.png)  
 
 -  plaidApp/get-access-token/ - (exchange public token to access_token)  
-![](/images/public.png)
-![](/images/access.png)
-![](/images/tokens.png)
+![](/images/public.png.png)
+![](/images/access.png.png)
+![](/images/tokens.png.png)
    
 -  plaidApp/get-transactions/ ------- (fetch transactions using access token)  
-![](/images/transactions.png)
+![](/images/transactions.png.png)
 
 ## Model Details:
-![](/images/x.png)
-![](/images/y.png)
-![](/images/z.png)
+![](/images/x.png.png)
+![](/images/y.png.png)
+![](/images/z.png.png)
