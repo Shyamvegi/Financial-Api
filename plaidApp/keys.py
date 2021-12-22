@@ -1,3 +1,5 @@
+#Enter your plaid keys here
+
 PLAID_CLIENT_ID='61bc6042197a3100132d9da6'
 PLAID_SECRET='48cd7c854491f47369704cf858b993'
 PLAID_ENV='sandbox'
