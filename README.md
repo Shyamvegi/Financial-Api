@@ -1,5 +1,4 @@
-## BrightMoney
-Assignment For Financial App Using Django,Rest Framework
+## Financial App Using Django,Rest Framework
 
 ## clone the repository using
 
