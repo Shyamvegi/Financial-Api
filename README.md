@@ -48,6 +48,7 @@ c:\\redis\\redis-cli ping
 (env) celery -A BankingApp Beat -loglevel=info
 ```
 ![](/Images/celery.png.png)
+![](/Images/Screenshot (253).png)
   
 ## API END-PONTS  
   
